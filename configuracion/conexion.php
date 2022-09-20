@@ -3,7 +3,6 @@
 
 
 class Conexion {
-	protected $dbh;
 	protected $contrasena = "";
 	protected $usuario = "root";
 	protected $nombre_bd = "prueba_tecnica_dev";
