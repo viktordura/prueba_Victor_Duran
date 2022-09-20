@@ -79,11 +79,13 @@ function guardarEmpleado($Empleados){
 		
 	}else{
 		
-		$id = $Empleados->insertar_empleado($_POST["email"],$_POST["area_id"],$_POST["boletin"],$_POST["descripcion"]);
+		$id = $Empleados->insertar_empleado($_POST["nombre"],$_POST["email"],$_POST["sexo"],$_POST["area_id"],$_POST["boletin"],$_POST["descripcion"]);
 
 		foreach ($_POST["roles"] as $key => $value) {
 			$Empleados->insertar_roles($id,$value);  
 		}
+
+		echo json_encode(array('id' => 0,'msm' => 'Ingreso exitoso' ));
 	}
 	
 
